@@ -7,7 +7,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile-scss": "node-sass ./cscc-sass/assets/scss/main.scss ./cscc-sass/assets/css/style.css -w --outputStyle=compressed"
+    "compile-scss": "node-sass  ./cscc-sass/assets/scss/main.scss ./cscc-sass/assets/css/style.css -w --outputStyle=compressed"
   },
   "keywords": [],
   "author": "",

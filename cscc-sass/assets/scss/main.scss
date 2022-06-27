@@ -11,6 +11,7 @@ body {
   color: #000;
   background: #fff;
   height: 100%;
+  width: 100%;
   position: relative;
 }
 
@@ -18,9 +19,6 @@ body.overflow {
   overflow: hidden;
 }
 
-head {
-  display: block;
-}
 .wrapper#header {
   background: none;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);
@@ -74,7 +72,6 @@ header#header > nav {
 header#header {
   height: 80px;
   background: #fff;
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 header#header.fix_me > div {
@@ -97,7 +94,6 @@ header#header.fix_me a.toggler em {
   top: 0;
   height: 50;
   width: 100%;
-  padding: 2% 13%;
 }
 
 .logo {
@@ -233,10 +229,12 @@ nav {
   width: 100%;
   flex: 1;
 }
+
 .second_nav {
   margin-top: 2%;
   width: 100%;
-  justify-content: space-around;
+  margin-left: 13%;
+  justify-content: space-between;
   position: relative;
 }
 .what-we-do h2 {
@@ -248,7 +246,9 @@ nav {
   color: #2d3192;
   position: relative;
 }
-
+.read_more_border {
+  margin-right: 26%;
+}
 .read_more {
   text-decoration: none;
   display: inline-block;
@@ -540,40 +540,31 @@ nav {
 }
 /* ----------------------------------End Sixth Space------------------- */
 
-/* ----------------------------------Start Sixth Space------------------- */
+/* ----------------------------------Start Seventh Space------------------- */
 
 .seventh_area {
-  max-width: 1280px;
+  max-width: 1150px;
   padding: 0 20px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  height: calc(100vh - 80px);
 }
 .map_svg {
   padding: 0px 0 0;
-  margin: -120px 0 0;
   user-select: none;
   position: relative;
+  height: 100%;
 }
 .map_svg svg {
   user-select: none;
   width: 100%;
-  height: auto;
   position: relative;
-  transform-origin: 0px 0px;
-  max-width: none !important;
-  max-height: none !important;
-  transition: -webkit-transform 0.4s ease 0s;
-  transition: transform 0.4s ease 0s;
-  transition: transform 0.4s ease 0s, -webkit-transform 0.4s ease 0s;
+
   cursor: pointer;
 }
 .flying_country {
   display: none;
-
-  -ms-flex-direction: row;
-  flex-direction: row;
-  flex-wrap: nowrap;
 
   justify-content: center;
   align-content: stretch;
@@ -991,13 +982,15 @@ figure {
   padding: 35px 0 10px;
   height: calc(100vh - 80px);
 }
-
+#tenth_space > div {
+  margin-left: 3%;
+  margin-right: 3%;
+}
 .tenth_grid {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
-  padding: 2% 13% 2%;
   align-content: stretch;
   align-items: center;
 }
@@ -1066,7 +1059,7 @@ figure {
   background: url(../photos/link_orange_icon.svg) no-repeat calc(100% - 24px)
     50%;
   box-shadow: inset 0 0 0 3px #fff;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .tenth_area .link a:hover {
@@ -1074,7 +1067,7 @@ figure {
 }
 @keyframes pulsate {
   0% {
-    box-shadow: 0 0 25px #181717, 0 0 50px #a79d0a;
+    box-shadow: 0 0 25px #181717, 0 0 50px #340aa7;
   }
 }
 /* ----------------------------------End Tenth Space------------------- */
@@ -1124,14 +1117,7 @@ figure {
   box-shadow: inset 0 0 0 3px #dfe4eb;
   border-radius: 12px;
 }
-.link:hover {
-  animation: pulsate 1s ease-in-out;
-}
-@keyframes pulsate {
-  0% {
-    box-shadow: 0 0 25px #adb9a8, 0 0 50px #140aa7;
-  }
-}
+
 .eleventh_area {
   margin-top: 5%;
   padding: 2% 13% 2%;
@@ -1193,7 +1179,7 @@ footer#footer {
   flex-direction: column;
   flex-wrap: nowrap;
 
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: stretch;
   align-items: stretch;
   padding: 35px 0 25px;
@@ -1230,7 +1216,7 @@ footer#footer {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: center;
   align-items: center;
   padding: 0 0 50px;
@@ -1289,6 +1275,9 @@ nav.footer_nav a {
   animation-duration: 0.15s;
   transition: all 0.15s linear;
 }
+.r_side .link {
+  margin-left: -100%;
+}
 .footer_first .link a {
   display: inline-block;
   height: 56px;
@@ -1303,8 +1292,6 @@ nav.footer_nav a {
     calc(100% - 24px) 50%;
   box-shadow: inset 0 0 0 3px #dfe4eb;
   border-radius: 12px;
-  animation-duration: 0s;
-  transition: all 0.15s linear;
 }
 .footer_contacts ul {
   display: none;
