@@ -14,13 +14,14 @@ body {
   width: 100%;
   position: relative;
 }
-
+html {
+  display: block;
+}
 body.overflow {
   overflow: hidden;
 }
 
 .wrapper#header {
-  background: none;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);
   position: relative;
 }
@@ -44,14 +45,13 @@ header#header {
   text-align: center;
   align-items: center;
   width: 100%;
-  height: 110px;
+  height: 3%;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 2;
-  animation-duration: 0.3s;
-  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
+
 header#header > nav {
   display: flex;
 
@@ -180,7 +180,7 @@ nav {
   width: 100%;
   position: relative;
   left: 0;
-  margin-top: 150px;
+  margin-top: 10%;
 }
 .scroll_link > div {
   max-width: 1140px;
@@ -189,8 +189,9 @@ nav {
 }
 .anim {
   opacity: 0;
-  transform: translateY(30px);
-  animation: moveup 0.8s linear forwards;
+  transform: translateY(80px);
+
+  animation: moveup 1s linear forwards;
 }
 @keyframes moveup {
   100% {
@@ -455,7 +456,7 @@ nav {
   padding: 32px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   display: block;
-  font-size: 1.37em;
+  font-size: 21px;
 
   font-weight: bold;
   color: #fff;
@@ -1278,7 +1279,7 @@ nav.footer_nav a {
 .r_side .link {
   margin-left: -100%;
 }
-.footer_first .link a {
+.link a {
   display: inline-block;
   height: 56px;
 
@@ -1292,6 +1293,14 @@ nav.footer_nav a {
     calc(100% - 24px) 50%;
   box-shadow: inset 0 0 0 3px #dfe4eb;
   border-radius: 12px;
+}
+.link a:hover {
+  animation: pulsate 1s ease-in-out;
+}
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 0 25px #f0e7e7, 0 0 50px #d63200;
+  }
 }
 .footer_contacts ul {
   display: none;
@@ -1448,7 +1457,7 @@ nav.footer_nav a {
 
   align-items: center;
   text-align: center;
-  margin-left: 23%;
+  margin-left: 13%;
 }
 .jis p {
   padding: 0 10px 0 0;
@@ -1483,5 +1492,6 @@ nav.footer_nav a {
   line-height: 1.5;
   color: #999;
   text-align: center;
+  margin-left: -14%;
 }
 /* <!-- FOOTER END --> */
